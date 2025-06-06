@@ -600,14 +600,19 @@
        locacao@europa.com.br // 2423-2502 | Filtros Europa/ Brasfilter</br>
        </p>
       <h2>Para hoje</h2>
-        <div id="toolbar">
-          <button class="ql-bold"></button>
-          <button class="ql-underline"></button>
-          <select class="ql-color"></select>
-          <button class="ql-list" value="bullet"></button>
-     </div>
-     <div id="editor"></div>
-     </aside>
-</div>
+     <textarea placeholder="Digite suas anotações aqui..." style="width: 95%; min-height: 100px; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; resize: vertical;"></textarea>
+    </aside>
+   </div>
+
+<script>
+  const textarea = document.querySelector('.painel-lateral textarea');
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('painel_anotacoes');
+    if (saved) textarea.value = saved;
+  });
+  textarea.addEventListener('input', () => {
+    localStorage.setItem('painel_anotacoes', textarea.value);
+  });
+</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <link href="https://static.vecteezy.com/system/resources/thumbnails/012/227/758/small/sun-color-icon-png.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta charset="utf-8"/>
-<title>Dashboard Prevent</title>
+<title>Terra Média</title>
 <style>
   body { 
     font-family: 'Quicksand', sans-serif;
@@ -149,7 +149,12 @@
       max-width: 380px; /* um pouco mais estreito em telas verticais */
     }
   }
-
+    #editor {
+      height: 150px;
+      background-color: white;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+    }
 </style>
  </head>
   <body>
@@ -582,6 +587,7 @@
        <strong>Nº Cartão:</strong> 5339 2000 2795 7965  </br>
        <strong>Pix:</strong> 00.461.479/0001-63  </br>
        <strong>Senha:</strong> 1874 </br>
+  
        <p><span style="font-size: 20px;"><strong>Gomaq:</strong></span></br>
        <strong>Login:</strong> PREVENT VOLUNTARIO DA PATRIA</br>
        <strong>Senha:</strong> v0lunt@r10</br>
@@ -593,25 +599,24 @@
        locacao@europa.com.br // 2423-2502 | Filtros Europa/ Brasfilter</br>
        </p>
       <h2>Para hoje</h2>
-     <textarea placeholder="Digite suas anotações aqui..." style="width: 95%; min-height: 100px; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; resize: vertical;"></textarea>
+        <div id="toolbar">
+          <button class="ql-bold"></button>
+          <button class="ql-underline"></button>
+          <select class="ql-color"></select
+          <button class="ql-list" value="bullet"></button>
+     </div>
+     <div id="editor"></div>
     </aside>
    </div>
 
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
-  const textarea = document.querySelector('.painel-lateral textarea');
-  window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('painel_anotacoes');
-    if (saved) textarea.value = saved;
-  });
-  textarea.addEventListener('input', () => {
-    localStorage.setItem('painel_anotacoes', textarea.value);
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+      toolbar: '#toolbar'
+    }
   });
 </script>
 </body>
 </html>
-
-
-📃📝🖥️📁📊
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/6180/6180229.png"/>
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/1994/1994825.png"/>
-<img alt="Ícone" class="icon" src=""/>

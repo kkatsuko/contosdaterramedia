@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<link href="https://static.vecteezy.com/system/resources/thumbnails/012/227/758/small/sun-color-icon-png.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<title>Dashboard Prevent</title>
+<style>
+  body { 
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('https://wallpaper.forfun.com/fetch/d1/d197f3d63e273b6f5c105412b799eae6.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0.3rem;
+    font-weight: 400;
+    line height: 1.5;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+  }
+  .fundo-opaco {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* branco com transparência */    
+    z-index: -1;
+}
+
+  h2, header, .titulo { 
+    background-color:rgba(255, 255, 255, 0.7);
+    padding: 0.3rem 0.6rem;
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 550;
+    border-radius: 8px;
+    margin-top: 0;
+    color: #222
+  }
+  .section {
+    margin-bottom: 1rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 0.4rem;
+    text-align: center;
+    transition: transform 0.2s;
+    font-size: 13px;
+    height: 90px;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .icon {
+    width: auto;
+    height: 32px;
+    margin-bottom: 0.5rem;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin-left: 0.2px;
+    margin-right: 0.2px;
+  }
+  .section-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .section {
+    flex: 1 1 0;
+    min-width: 100px;
+  }
+  .painel-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .painel-lateral {
+    flex: 1;
+    width: 100%;
+    background-color: #6d7fa3;
+    color: #e0ebff;
+    padding: 1rem;
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+    height: fit-content;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 520px;
+    min-width: 100px;
+
+  }
+
+  .conteudo-links {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .painel-container {
+      flex-direction: column;
+    }
+
+    .painel-lateral, .conteudo-links {
+      width: 100%;
+    }
+  }
+
+  .sessao-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  @media (orientation: portrait) {
+    .sessao-dupla {
+      grid-template-columns: 1fr; /* sessões uma embaixo da outra */
+    }
+
+    .painel-container {
+      flex-direction: row; /* mantém painel à direita */
+    }
+
+    .painel-lateral {
+      max-width: 380px; /* um pouco mais estreito em telas verticais */
+    }
+  }
+
+</style>
+ </head>
+  <body>
+   <div class="fundo-opaco"></div>
+   <div class="painel-container"><main class="conteudo-links"><div class="sessao-dupla"><div class="section">
+<h2>Administração</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/17evixydb7J1xpY9egpUiSHiCtf665sfpWRy0l0qW8_c/edit?gid=332866388#gid=332866388" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/1565/1565844.png"/>
+<div class="title"> Achados e perdidos <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/presentation/d/1x060uywIw8I-62aVF02nBInbk0SLJmI-CALu8H6KKq4/edit#slide=id.p" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/10650/10650158.png"/>
+<div class="title"> Protocolo Achados e Perdidos<br/> <span>🏷️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1N7yUxF5QqA5rmVLcU5llrzgHLiqvJaO73LhkFIJHYBk/edit?gid=398349984#gid=398349984" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/10650/10650158.png"/>
+<div class="title"> Agenda <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1Zn4NB42Evf8OIV_7UUc0liHziPbKawLSpiSq5e_N1L4/edit?gid=234282480#gid=234282480" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/6963/6963050.png"/>
+<div class="title"> Papanicolau <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1mB3gRr76lWFH7W26QbQc7GnJyxEnBe44pRsPXh0fySQ/edit?gid=1845910384#gid=1845910384" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/6177/6177169.png"/>
+<div class="title"> Receituário B <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1BnsPQ8LtWbQRsTY3r6W9OzeiOA7CQW3TcU0evEx6fmo/edit?gid=1044449960#gid=1044449960" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/2481/2481879.png"/>
+<div class="title"> Estacionamento <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1Aga0jTPkVrIdIYWmFxuM72EMrfpBSw48Wb9WbaLsmJg/edit?gid=13977735#gid=13977735" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/4781/4781134.png"/>
+<div class="title"> Armários <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/presentation/d/1ImQiF6UydC6b8GtKHqUqMZW9WSOOH0AzpBJdLUcY7E8/edit" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/1374/1374863.png"/>
+<div class="title"> Etiquetas armários <br/> <span>🏷️</span></div>
+</a>
+
+<a class="card" href="https://drive.google.com/drive/folders/1RH6jsDzag5loOaJB0zEr9Rop7qNIQdnm" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/5994/5994710.png"/>
+<div class="title"> Pasta Santana <br/> <span>📁</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1N7yUxF5QqA5rmVLcU5llrzgHLiqvJaO73LhkFIJHYBk/edit?gid=515994880#gid=515994880" target="_blank">
+<img alt="Ícone" class="icon" src="https://www.svgrepo.com/show/8335/list.svg"/>
+<div class="title"> Lista de CNPJs <br/> <span>📊</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Estoque</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1ClEBR-fojAkLhL171gfJ1mWdF1ocwVBeyYcD1_JBokc/edit?gid=1158675279#gid=1158675279" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQv48FgfXDT4qf1KSwDLDS0errKsC5t7X11IjaOcWxeyMrfhji3"/>
+<div class="title"> Histórico de pedidos <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1ClEBR-fojAkLhL171gfJ1mWdF1ocwVBeyYcD1_JBokc/edit?gid=1571102693#gid=1571102693" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/12141/12141426.png"/>
+<div class="title"> Movimento estoque <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1ClEBR-fojAkLhL171gfJ1mWdF1ocwVBeyYcD1_JBokc/edit?gid=910687376#gid=910687376" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/10614/10614645.png"/>
+<div class="title"> Posição do estoque <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1n1LeqTUBPRaqwZERwWETV2Ev1yD85cENoshGKjBK4xM/edit?gid=1338959454#gid=1338959454" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/2541/2541986.png"/>
+<div class="title"> Papelaria e Gráfica <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/presentation/d/1DOQgouuUhWbtYvpesS64g8Le3R23mihEhBJx5CK6wvo/edit#slide=id.p" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4433/4433552.png"/>
+<div class="title"> Etiquetas estoque <br/> <span>🏷️</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Financeiro</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSdnxmARBOufXckzpYIdske9BGYcfB-fT8qT-DjfLqGixx9kzA/viewform" target="_blank">
+<img alt="Ícone" class="icon" src=""/>
+<div class="title"> Forms NF Pri  <br/><span>📝</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSemnT5iPHG7uTBF5rwFjaDcsKh1A-X3jjdprVrPqJj_ODbh3w/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0" target="_blank">
+<img alt="Ícone" class="icon" src=""/>
+<div class="title"> Forms NF Helom  <br/><span>📝</span></div>
+</a>
+
+<a class="card" href="https://drive.google.com/drive/folders/1HOsB79uhr120x8-xhv1pfx_58YBJSBSu" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn1.iconfinder.com/data/icons/business-and-finance-flat-3/128/128-512.png"/>
+<div class="title"> Pasta NFs  <br/><span>📁</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15kT5OzFr7eeKPBwB2OGaO3ktFFh9S2dI0JuICtiQmHg/edit?gid=995108160#gid=995108160" target="_blank">
+<img alt="Ícone" class="icon" src="https://static.vecteezy.com/ti/vetor-gratis/p1/6432768-handheld-survey-report-flat-of-checklist-vetor.jpg"/>
+<div class="title"> Controle de NF  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/27/group/160" target="_blank">
+<img alt="Ícone" class="icon" src="https://apps.odoo.com/web/image/loempia.module/167097/icon_image/300x300?unique=fe88c05"/>
+<div class="title"> Jira Lançamento NF   <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://drive.google.com/drive/folders/10rwNoRc8nCX8wMPxALywHFrUT6ZW26o2" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/9470/9470223.png"/>
+<div class="title"> Condomínio  <br/><span>📁</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/16/group/78/create/1420" target="_blank">
+<img alt="Ícone" class="icon" src="https://img2.gratispng.com/20240217/uff/transparent-credit-card-icon-credit-card-with-number-and-swipe-1710873982335.webp"/>
+<div class="title"> Jira - Fundo Fixo  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15kT5OzFr7eeKPBwB2OGaO3ktFFh9S2dI0JuICtiQmHg/edit?gid=2047865698#gid=2047865698" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/902/902081.png"/>
+<div class="title"> Controle Fundo Fixo  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15kT5OzFr7eeKPBwB2OGaO3ktFFh9S2dI0JuICtiQmHg/edit?gid=1015653915#gid=1015653915" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/2961/2961248.png"/>
+<div class="title"> Controle Particulares  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/16/group/78/create/1067" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4090/4090458.png"/>
+<div class="title"> Jira - Particulares  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://vhprvwp1wd01.hec.preventsenior.com.br:44380/sap/bc/ui2/flp?sap-client=600&amp;sap-language=PT#Shell-home" target="_blank">
+<img alt="Ícone" class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"/>
+<div class="title"> SAP  <br/><span>🖥️</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>RHDP</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1iSTjcz69Nl-GwqeVe3Z3dd8iEIrDMYIJrGGwwmyBQ0M/edit?gid=0#gid=0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/6186/6186048.png"/>
+<div class="title"> Colaboradores  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1zdS_A8rkUKnOb2I3B5wWxMQtVVUTW6HT7HnygadznDE/edit?gid=0#gid=0" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRJ-psgyGvnj5VY3Wq9YBQTJHO0UgoSGFKVYSpNThLTxUFHMIMO"/>
+<div class="title"> Ocorrências  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://hcm19.sapsf.com/sf/customExternalModule?bplte_company=preventsen" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/11671/11671603.png"/>
+<div class="title"> SAP RH  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1ErrmLR_A3UG7sAGZKlod46YaIQRqIvpJuvmfPsMbODE/edit?gid=0#gid=0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/6549/6549774.png"/>
+<div class="title"> Calculadora BH  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://drive.google.com/drive/folders/0B9tX_HWK0bA8U0V1WkowajY5QVE?resourcekey=0-TZ5pMOiaWV-OzOtUL9sUKA" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3260/3260463.png"/>
+<div class="title"> Pasta colaboradores <br/><span>📁</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1iSTjcz69Nl-GwqeVe3Z3dd8iEIrDMYIJrGGwwmyBQ0M/edit?gid=2113944198#gid=2113944198" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/4116/4116366.png"/>
+<div class="title"> Chamados RHDP  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/14/group/75" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT-oBxCTp1Z6wKH-NEmBBRqVZ3jpLTQqq4JiXUL3-PzHi-38McZ"/>
+<div class="title"> Jira Chamados RHDP  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1CTYVtjstUQ4zEy89u0zH_pJAi9j9Qdl94JS2REJdytE/edit?gid=1860516980#gid=1860516980" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/10963/10963675.png"/>
+<div class="title"> Controle de Férias  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1iSTjcz69Nl-GwqeVe3Z3dd8iEIrDMYIJrGGwwmyBQ0M/edit?gid=583754435#gid=583754435" target="_blank">
+<img alt="Ícone" class="icon" src="https://play-lh.googleusercontent.com/w-43piHXLR0hIYa_kY0rScaEKd29XKD1hEk4pIEQIdxu7Uk3zDRuyC3hw6NUUVyjVQ"/>
+<div class="title"> Cartão Caju  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://hcm19.sapsf.com/sf/careers/jobsearch?bplte_company=preventsen&amp;_s.crb=jb6Qr9GpXdNseMfy2IcxoOa0soogy5Tmiw059qfTO9k%253d" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/548/548198.png"/>
+<div class="title"> Vagas  <br/><span>🖥️</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>T.I./ Impressora</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=0#gid=0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/14996/14996727.png"/>
+<div class="title"> Chamados T.I. <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/22" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3067/3067501.png"/>
+<div class="title"> Jira - TI <br/> <span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1795531691#gid=1795531691" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3208/3208661.png"/>
+<div class="title"> Chamados Gomaq  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="http://chamado-gomaq.com.br/publicwebdesk/Login.aspx" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlT1p68cl0Lm78w2slEEcCStzJo1Inc433kw&amp;s"/>
+<div class="title"> Solicitações Gomaq  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1StlVa5nmE0eN5cMPQUqBd6ZLZR9sXEVWRCPZzgXFeVk/edit?gid=1591576581#gid=1591576581" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3099/3099918.png"/>
+<div class="title"> Suprimentos Gomaq  <br/><span>📊</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Manutenção</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1XaaBhSkZ8d8LRYZQkJfUioPEGTGUI9bW/edit?gid=794442060#gid=794442060">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/1441/1441359.png"/>
+<div class="title"> Checklist <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.globalthings.net//Login.aspx" target="_blank">
+<img alt="Ícone" class="icon" src="https://play-lh.googleusercontent.com/PVUF0ljqVmi52fe436WuDTx9hx9gtfsnqZ1Wjb1xCeux3feb6Y3tBSoCljgwTScR3-fM"/>
+<div class="title"> Effort <br/> <span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1107291888#gid=1107291888" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/256/18208/18208091.png?semt=ais_hybrid"/>
+<div class="title"> Chamado Manutenção <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1724830627#gid=1724830627" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/1530/1530481.png"/>
+<div class="title"> Chamados Cgelar <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1759727490#gid=1759727490" target="_blank">
+<img alt="Ícone" class="icon" src="https://icons.veryicon.com/png/o/object/common-household-appliances/water-purifier-1.png"/>
+<div class="title"> Chamados Filtros  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=478493983#gid=478493983" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/4597/4597335.png"/>
+<div class="title"> Chamados Dispenser   <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSd5pylmCyXQCtwdArY77hFC67Z0foX_0w5YJzMkoivPJPezQg/viewform" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4814/4814318.png"/>
+<div class="title"> Checklist Santana <br/> <span>📝</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Transporte</h2>
+<div class="grid">
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/15/group/77/create/778" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/316/316612.png"/>
+<div class="title"> Jira - Transporte <br/> <span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=297323732#gid=297323732" target="_blank">
+<img alt="Ícone" class="icon" src="https://t4.ftcdn.net/jpg/13/48/64/87/360_F_1348648729_lbK8leQwtY5N5dZyzGIQcjo3BWfAjV2Y.jpg"/>
+<div class="title"> Chamado Transporte <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/document/d/13dXll_xQms7h-Zn3MZg-necvUWoZw_ZYBCvc8oKM_yg/edit?tab=t.0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4676/4676190.png"/>
+<div class="title"> Carta de Transporte <br/> <span>📃</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSfoDq7wt-qmGmdkXmL8oU3pP1D3xCXnEcvu2QvHJ5EJdh0CrA/viewform" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQ1sI5vmHyZjqlbIZj8l78PMU71up2ywtYw&amp;s"/>
+<div class="title"> Forms Master  <br/><span>📝</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1003887506#gid=1003887506" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/8072/8072834.png"/>
+<div class="title"> Chamados Master <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://app1.mytracking.com.br/mytracking/pages/public/login.xhtml" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/1365/1365537.png"/>
+<div class="title"> Solicitação Master <br/> <span>🖥️</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Documentos</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1WTZNHKKd6NvlNJS87N6eBoopPYCdNjrZRL8h-iTCpe8/edit?gid=0#gid=0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/307/307886.png"/>
+<div class="title"> Saída de Malote  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/document/d/18Q6nwM_9VmUIoFDAu8BeB6OfhkT0vsUHRaBakh1nG8Y/edit?tab=t.0" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/11147/11147216.png"/>
+<div class="title"> Protocolo Malote  <br/><span>📃</span></div>
+</a>
+
+<a class="card" href="https://drive.google.com/drive/folders/1fGDfXLXwWY25YoyFdkNTQIl1CVHKuhuj/" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3455/3455365.png"/>
+<div class="title"> Modelos  <br/><span>📃</span>
+</div></a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1N7yUxF5QqA5rmVLcU5llrzgHLiqvJaO73LhkFIJHYBk/edit?gid=1281067899#gid=1281067899	" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/6747/6747196.png"/>
+<div class="title"> Docs Qualiex <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://apps1.qualiex.com/Shared/Dashboard" target="_blank">
+<img alt="Ícone" class="icon" src="https://qualiex.com/wp-content/uploads/2023/05/QUALIEX_FULL_AZUL.png"/>
+<div class="title"> Qualiex  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1AVF0oolCfTv3lB2KBj7hdCafuEES7fBvQ8Aq0QywCL4/edit?gid=476900659#gid=476900659" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/2014/2014997.png"/>
+<div class="title"> Índice Vigilância  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://www.rentokil.com/br/" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSLWhatX7kv1XbMrD5z9TWHGfiEIZ1lsRYPw&amp;s"/>
+<div class="title"> Relatórios Mensais  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=754443356#gid=754443356" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/149/149012.png"/>
+<div class="title"> Chamados Acop Files <br/> <span>📊</span> </div>
+</a>
+
+<a class="card" href="https://www.acopfiles.com.br/solicitacoes/solicita_cliente/solicitacoeslist.php" target="_blank">
+<img alt="Ícone" class="icon" src="https://www.acopfiles.com.br/images/logo/logo_v2.png?d=201710311154"/>
+<div class="title"> Solicitações <br/> <span>🖥️</span></div>
+
+</a>
+<a class="card" href="http://acopfiles.ddns.com.br:81/preventsenior/sistema/unidades/documentolist.php" target="_blank">
+<img alt="Ícone" class="icon" src="https://www.acopfiles.com.br/images/logo/logo_v2.png?d=201710311154"/>
+<div class="title"> Cadastro de caixas <br/> <span>🖥️</span></div>
+</a>
+
+<a class="card" href="http://sistema.acopfiles.com.br/portal/solicitacao" target="_blank">
+<img alt="Ícone" class="icon" src="https://www.acopfiles.com.br/images/logo/logo_v2.png?d=201710311154"/>
+<div class="title"> Caixas e etiquetas <br/> <span>🖥️</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Orçamentos/ Patrimônio</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=1754002293#gid=1754002293" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4248/4248649.png"/>
+<div class="title"> Chamado Orçamento  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/31/group/161/create/1235" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/7909/7909236.png"/>
+<div class="title"> Jira - Orçamentos<br/>  <span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1N7yUxF5QqA5rmVLcU5llrzgHLiqvJaO73LhkFIJHYBk/edit?gid=1832210247#gid=1832210247" target="_blank">
+<img alt="Ícone" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUSiyBDR3dR9_Yd2Zjsxm4HAFLVAsV5xRWIA&amp;s"/>
+<div class="title"> Fornecedores  <br/><span>📊</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/15XRfWa8g9YYtWLM1V1bB4gCsR8w-zm_xKmNXkTq2nj0/edit?gid=14727177#gid=14727177" target="_blank">
+<img alt="Ícone" class="icon" src="https://cbx-prod.b-cdn.net/COLOURBOX52345840.jpg?width=800&amp;height=800&amp;quality=70"/>
+<div class="title"> Chamado Patrimônio<br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="https://preventsenior.atlassian.net/servicedesk/customer/portal/17" target="_blank">
+<img alt="Ícone" class="icon" src=""/>
+<div class="title"> Jira - Patrimônio  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1F2imrZN8_WJbbT-RDBb_oOToQhgbnxlXeBmuQMyOVuM/edit?gid=58961319#gid=58961319" target="_blank">
+<img alt="Ícone" class="icon" src=""/>
+<div class="title"> Patrimônio Geral <br/><span>📊</span></div>
+</a>
+</div>
+
+</div><div class="section">
+<h2>Recepção</h2>
+<div class="grid">
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1k-wwkVWJk5CSD9o4HShO86o061yJh0fuxijIjmFa1Ng/edit?gid=915950785#gid=915950785" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/256/15756/15756014.png"/>
+<div class="title"> Grade Santana <br/> <span>📊</span></div>
+</a>
+
+<a class="card" href="http://portalweb.preventsenior.com.br/portalweb/" target="_blank">
+<img alt="Ícone" class="icon" src="https://preventplanosaude.com.br/wp-content/uploads/2021/12/cropped-Prevent_Senior_logo-Recovered.png"/>
+<div class="title"> Portal Web  <br/><span>🖥️</span></div>
+</a>
+
+<a class="card" href="https://docs.google.com/spreadsheets/d/1pm02gbmPz20eS6402ZxLpq8GkJiTj_qBNH4wZVdguj0/edit?gid=112241066#gid=112241066" target="_blank">
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/3974/3974877.png"/>
+<div class="title"> Controle de M.I. <br/> <span>📊</span></div>
+</a>
+</div>
+
+</main><aside class="painel-lateral">
+<h2>Informações</h2>
+
+       <p><span style="font-size: 20px;"><strong>Fundo Fixo:</strong></span></br>
+       <strong>Livro Caixa:</strong> 0054</br>
+       <strong>Nº Cartão:</strong> 5339 2000 2795 7965  </br>
+       <strong>Pix:</strong> 00.461.479/0001-63  </br>
+       <strong>Senha:</strong> 1874 </br>
+       <p><span style="font-size: 20px;"><strong>Gomaq:</strong></span></br>
+       <strong>Login:</strong> PREVENT VOLUNTARIO DA PATRIA</br>
+       <strong>Senha:</strong> v0lunt@r10</br>
+       <strong>Emails Importantes:</strong></br>
+       suprimentos.projetos@gomaq.com.br | Solicitação de etiqueta/Ribbon </br>
+       retorno.equipamentos@gomaq.com.br | Devolução de insumos e impressoras</br>
+       conferencia.projetos@gomaq.com.br | Duvidas faturamentos </br>
+       <p><strong>Manutenção Filtros</strong></br>
+       locacao@europa.com.br // 2423-2502 | Filtros Europa/ Brasfilter</br>
+       </p>
+      <h2>Para hoje</h2>
+     <textarea placeholder="Digite suas anotações aqui..." style="width: 95%; min-height: 100px; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; resize: vertical;"></textarea>
+    </aside>
+   </div>
+
+<script>
+  const textarea = document.querySelector('.painel-lateral textarea');
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('painel_anotacoes');
+    if (saved) textarea.value = saved;
+  });
+  textarea.addEventListener('input', () => {
+    localStorage.setItem('painel_anotacoes', textarea.value);
+  });
+</script>
+</body>
+</html>
+
+
+📃📝🖥️📁📊
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/6180/6180229.png"/>
+<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/1994/1994825.png"/>
+<img alt="Ícone" class="icon" src=""/>

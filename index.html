@@ -1,190 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<nav>
-  <a href="index.html">Início</a>
-  <a href="personagens.html">Personagens</a>
-  <a href="sessoes.html">Sessões</a>
-  <a href="regras.html">Regras</a>
-</nav>
-
   <meta charset="UTF-8">
-  <title>Painel da Campanha RPG</title>
-  <style>
-nav {
-  margin-top: 15px;
-}
-nav a {
-  margin: 0 10px;
-  color: #cfa96d;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url(https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
-      color: #1e1e1e;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: url('BANER') center/cover no-repeat;
-      padding: 60px 20px;
-      text-align: center;
-      color: black;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      text-shadow: 2px 2px 4px #000;
-    }
-    main {
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-	  margin-right: 340px;
-    }
-    .card {
-      background-color: #f4f1e6;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 10px #0005;
-      transition: transform 0.2s;
-      max-height:250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card img {
-      max-height: 200px;
-      max-width: 100%;
-      object-fit: contain;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
-
-    }
-    .card h2 {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #4b661f;
-      text-align: center;
-    }
-    .card a {
-      color: #cfa96d;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-	#painel-notas {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 300px;
-  height: 500px;
-  background: #fff9eb;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  z-index: 9999;
-  padding: 10px;
-  box-shadow: 0 0 10px #0005;
-  overflow: hidden;
-}
-#editor {
-  height: 100%;
-}
-.ql-toolbar {
-  border-radius: 10px 10px 0 0;
-}
-.ql-container {
-  border-radius: 0 0 10px 10px;
-}
-.ql-editor {
-  color: #2f2f2f; /* cor do texto */
-  font-family: 'Georgia', serif; /* opcional: muda o estilo da fonte */
-  font-size: 16px;
-}
-  </style>
+  <title>Crônicas de Eldoria</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-
   <header>
-    <h1>Crônicas de Terra Média</h1>
-    <p>Phillip!</p>
+    <h1>Crônicas de Eldoria</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="sessoes.html">Sessões</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Teseu -->
-    <div class="card">
-      <img src="https://media.craiyon.com/2025-04-03/v24gqvsMR5G7OvQAYCAjjg.webp" alt="Imagem do personagem 1">
-      <a href="https://drive.google.com/open?id=1cXyzqmEj2K9cIGQPoR5890E-uOXIWcqXPZ_AnPs3VgM&usp=drive_copy"><h2>Teseu, o Bárbaro</h2></a>
-    </div>
-
-    <!-- Kinex -->
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10OenWEOfXx1AXq3_6l4Ju1m8bUmLcsBn4A&s" alt="Imagem do personagem 2">
-      <a href="https://link-da-ficha.com"><h2>Kinex, o Alquimista</h2></a>
-    </div>
-
-    <!-- Pheraly -->
-    <div class="card">
-      <img src="https://pics.craiyon.com/2023-07-23/9e411f4aaefc4ca39d7f53dbbd9784be.webp" alt="Imagem do personagem 2">
-      <a href="https://link-da-ficha.com"><h2>Pheraly, a  Maga</h2></a>
-    </div>
-
-    <!-- Mariok -->
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsf3xlfUDi3AohO0v63WzGwSK8eDM3ddX2w&s" alt="Imagem do personagem 2">
-      <a href="https://link-da-ficha.com"><h2>Mariok, o Monge</h2></a>
-    </div>
-
-    <!-- Resumo de Sessões -->
-    <div class="card">
-      <h2>Resumo da Última Sessão</h2>
-      <p>Na última aventura, o grupo enfrentou os guardiões do templo perdido...</p>
-      <a href="https://link-do-doc-de-resumos.com">Ver todas as sessões</a>
-    </div>
+    <section>
+      <h2>Bem-vindo ao mundo de Eldoria</h2>
+      <p>Explore as aventuras, personagens e segredos desta campanha!</p>
+    </section>
   </main>
+
+  <aside id="painel-notas">
+    <div id="editor"></div>
+  </aside>
 
   <footer>
     <p>Campanha criada por Francis & amigos ♥</p>
   </footer>
 
-<!-- Painel de Notas -->
-<div id="painel-notas">
-  <div id="editor"></div>
-</div>
-
-<!-- Quill.js -->
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-<script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
-  });
-
-  // Salvar e carregar anotações com localStorage
-  const storageKey = 'eldoria-anotacoes';
-  const saved = localStorage.getItem(storageKey);
-  if (saved) {
-    quill.root.innerHTML = saved;
-  }
-  quill.on('text-change', () => {
-    localStorage.setItem(storageKey, quill.root.innerHTML);
-  });
-</script>
-
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <script src="js/notas.js"></script>
 </body>
 </html>

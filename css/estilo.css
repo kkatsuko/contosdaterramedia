@@ -78,3 +78,8 @@ main {
   color: #4b661f;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

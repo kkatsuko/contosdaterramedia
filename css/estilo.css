@@ -58,6 +58,11 @@ main {
   box-shadow: 0 0 10px #0005;
   text-align: center;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 100%;
 }
 
 .card:hover {
@@ -65,9 +70,10 @@ main {
 }
 
 .card img {
-  max-height: 180px;
-  object-fit: cover;
   width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 8px;
 }
 

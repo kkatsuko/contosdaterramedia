@@ -11,7 +11,7 @@ body {
   flex-direction: column;
 }
 header {
-  background-image: url "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJW535FVK94VnbnGhnXzDXL-vn1_8NFPlqy0J5OJCd2YvchaO2iDs1MKTruWmHmXJYmmo&usqp=CAU";
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJW535FVK94VnbnGhnXzDXL-vn1_8NFPlqy0J5OJCd2YvchaO2iDs1MKTruWmHmXJYmmo&usqp=CAU);
   padding: 20px;
   text-align: center;
 }

@@ -1,293 +1,170 @@
 <!DOCTYPE html>
-
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<link href="https://cdn-icons-png.flaticon.com/512/10069/10069254.png" type="image/png"/>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-<meta charset="utf-8"/>
-<title>Dashboard RPG</title>
-<style>
-  body { 
-    font-family: 'Quicksand', sans-serif;
-    background-image: url('https://www.datocms-assets.com/132613/1724440968-creditgreenpeace-greatbearrainforest-spruceinterior-2.jpg?w=1200');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 0.3rem;
-    font-weight: 400;
-    line height: 1.5;
-    font-size: 14px;
-    font-weight: 400;
-    position: relative;
-  }
-  .fundo-opaco {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.4); /* branco com transparência */    
-    z-index: -1;
-}
-
-  h2, header, .titulo { 
-    background-color:rgba(255, 255, 255, 0.7);
-    padding: 0.3rem 0.6rem;
-    display: inline-block;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 550;
-    border-radius: 8px;
-    margin-top: 0;
-    color: #222
-  }
-  .section {
-    margin-bottom: 1rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 0.4rem;
-    text-align: center;
-    transition: transform 0.2s;
-    font-size: 13px;
-    height: 90px;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  .icon {
-    width: auto;
-    height: 66px;
-    margin-bottom: 0.5rem;
-  }
-  .title {
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    margin-left: 0.2px;
-    margin-right: 0.2px;
-  }
-  .section-wrapper {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .section {
-    flex: 1 1 0;
-    min-width: 100px;
-  }
-  .painel-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  .painel-lateral {
-    flex: 1;
-    width: 100%;
-    background-color: #6d7fa3;
-    color: #e0ebff;
-    padding: 1rem;
-    position: sticky;
-    top: 1rem;
-    align-self: flex-start;
-    height: fit-content;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 520px;
-    min-width: 100px;
-
-  }
-
-  .conteudo-links {
-    flex: 2;
-    min-width: 300px;
-  }
-
-  @media (max-width: 768px) {
-    .painel-container {
+  <meta charset="UTF-8">
+  <title>Painel da Campanha RPG</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
+      color: #1e1e1e;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('banner.jpg') center/cover no-repeat;
+      padding: 60px 20px;
+      text-align: center;
+      color: black;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px #000;
+    }
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+	  margin-right: 340px;
+    }
+    .card {
+      background-color: #f4f1e6;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px #0005;
+      transition: transform 0.2s;
+      max-height:250px;
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
-
-    .painel-lateral, .conteudo-links {
-      width: 100%;
+    .card:hover {
+      transform: scale(1.02);
     }
-  }
+    .card img {
+      max-height: 200px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
 
-  .sessao-dupla {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  @media (orientation: portrait) {
-    .sessao-dupla {
-      grid-template-columns: 1fr; /* sessões uma embaixo da outra */
     }
-
-    .painel-container {
-      flex-direction: row; /* mantém painel à direita */
+    .card h2 {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #4b661f;
+      text-align: center;
     }
-
-    .painel-lateral {
-      max-width: 380px; /* um pouco mais estreito em telas verticais */
+    .card a {
+      color: #cfa96d;
+      text-decoration: none;
     }
-  }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+	#painel-notas {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  height: 500px;
+  background: #fff9eb;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  z-index: 9999;
+  padding: 10px;
+  box-shadow: 0 0 10px #0005;
+  overflow: hidden;
+}
+#editor {
+  height: 100%;
+}
+.ql-toolbar {
+  border-radius: 10px 10px 0 0;
+}
+.ql-container {
+  border-radius: 0 0 10px 10px;
+}
+.ql-editor {
+  color: #2f2f2f; /* cor do texto */
+  font-family: 'Georgia', serif; /* opcional: muda o estilo da fonte */
+  font-size: 16px;
+}
+  </style>
+</head>
+<body>
 
-</style>
- </head>
-  <body>
-   <div class="fundo-opaco"></div>
-   <div class="painel-container"><main class="conteudo-links"><div class="sessao-dupla"><div class="section">
-<h2>Personagens</h2>
-<div class="grid">
+  <header>
+    <h1>Crônicas de Eldoria</h1>
+    <p>Phillip!</p>
+  </header>
 
-<a class="card" href="https://docs.google.com/spreadsheets/d/1cXyzqmEj2K9cIGQPoR5890E-uOXIWcqXPZ_AnPs3VgM/edit?gid=1957415677#gid=1957415677" target="_blank">
-<img alt="Ícone" class="icon" src="https://media.craiyon.com/2025-04-15/4jWaxJZuR4yYhA-swpEnTw.webp"/>
-<div class="title">Teseu<br/></div>
-</a>
+  <main>
+    <!-- Teseu -->
+    <div class="card">
+      <img src="https://media.craiyon.com/2025-04-03/v24gqvsMR5G7OvQAYCAjjg.webp" alt="Imagem do personagem 1">
+      <a href="https://drive.google.com/open?id=1cXyzqmEj2K9cIGQPoR5890E-uOXIWcqXPZ_AnPs3VgM&usp=drive_copy"><h2>Teseu, o Bárbaro</h2></a>
+    </div>
 
-<a class="card" href="https://docs.google.com/spreadsheets/d/1tWRIC6-6JBukeNMX1i-u-q5xQNiP6sM1BfJYByL9ZCQ/edit?gid=1957415677#gid=1957415677" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdnb.artstation.com/p/assets/images/images/059/887/349/large/christian-hadfield-1-dnd-pathfinder-pigwit.jpg?1689719076"/>
-<div class="title"> Kinex <br/></div>
-</a>
+    <!-- Kinex -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10OenWEOfXx1AXq3_6l4Ju1m8bUmLcsBn4A&s" alt="Imagem do personagem 2">
+      <a href="https://link-da-ficha.com"><h2>Kinex, o Alquimista</h2></a>
+    </div>
 
-<a class="card" href="https://docs.google.com/spreadsheets/d/1fm_tlPve2b-qQ82BGeRI_bPQ7sYCwjPNvsU2vRGnGx0/edit?gid=1957415677#gid=1957415677" target="_blank">
-<img alt="Ícone" class="icon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/be90b021-5028-4446-9456-99e4918abf4e/df5eecs-917b1076-b6ef-4318-91a9-1cddee028823.jpg/v1/fill/w_1280,h_1512,q_75,strp/tiefling_portrait_by_wrecktoom_df5eecs-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUxMiIsInBhdGgiOiJcL2ZcL2JlOTBiMDIxLTUwMjgtNDQ0Ni05NDU2LTk5ZTQ5MThhYmY0ZVwvZGY1ZWVjcy05MTdiMTA3Ni1iNmVmLTQzMTgtOTFhOS0xY2RkZWUwMjg4MjMuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.BqHPIHQ6VHTvtLoMTHF2HJuRB3gYIsczPA0FRLGPIF8"/>
-<div class="title"> Pheraly <br/></div>
-</a>
+    <!-- Pheraly -->
+    <div class="card">
+      <img src="https://pics.craiyon.com/2023-07-23/9e411f4aaefc4ca39d7f53dbbd9784be.webp" alt="Imagem do personagem 2">
+      <a href="https://link-da-ficha.com"><h2>Pheraly, a  Maga</h2></a>
+    </div>
 
-<a class="card" href="https://docs.google.com/spreadsheets/d/1Zn4NB42Evf8OIV_7UUc0liHziPbKawLSpiSq5e_N1L4/edit?gid=234282480#gid=234282480" target="_blank">
-<img alt="Ícone" class="icon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/63b24341-00ce-43f5-b4c0-449efeddaf99/df3l4lf-389a8b8a-ab62-46d2-9931-ba1cb21533d8.png/v1/fill/w_1280,h_1280,q_80,strp/tengu_pathfinder_by_palimpoline_df3l4lf-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzYzYjI0MzQxLTAwY2UtNDNmNS1iNGMwLTQ0OWVmZWRkYWY5OVwvZGYzbDRsZi0zODlhOGI4YS1hYjYyLTQ2ZDItOTkzMS1iYTFjYjIxNTMzZDgucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Ewb_vhes4V58Pk0jVO9qJxEixCUggkmwkKp0W5eLMBw"/>
-<div class="title"> Mariok <br/></div>
-</a>
-</div>  
-     
-</div><div class="section">
-<h2>Sessão 2</h2>
-<div class="grid">
+    <!-- Mariok -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsf3xlfUDi3AohO0v63WzGwSK8eDM3ddX2w&s" alt="Imagem do personagem 2">
+      <a href="https://link-da-ficha.com"><h2>Mariok, o Monge</h2></a>
+    </div>
 
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyV389oI_1FmjLAj2fepiFmeY87pkLGiC9kg&s"/>
-<div class="title"> Card <br/></div>
-</a>
+    <!-- Resumo de Sessões -->
+    <div class="card">
+      <h2>Resumo da Última Sessão</h2>
+      <p>Na última aventura, o grupo enfrentou os guardiões do templo perdido...</p>
+      <a href="https://link-do-doc-de-resumos.com">Ver todas as sessões</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Campanha criada por Francis & amigos ♥</p>
+  </footer>
+
+<!-- Painel de Notas -->
+<div id="painel-notas">
+  <div id="editor"></div>
 </div>
 
-</div><div class="section">
-<h2>Sessão 3</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/5980/5980620.png"/>
-<div class="title"> Nome do Card  <br/>Inserir Link</div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 3</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.freepik.com/512/141/141739.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 5</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/1864/1864480.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 6</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/1063/1063479.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 7</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/8323/8323738.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 8</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/8493/8493027.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</div><div class="section">
-<h2>Sessão 10</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://i.pinimg.com/564x/bb/17/fd/bb17fd622a6f673f4100a702169a0ad9.jpg"/>
-<div class="title"> Card doido <br/></div>
-</a></div>
-
-</div><div class="section">
-<h2>Sessão 11</h2>
-<div class="grid">
-
-<a class="card" href="" target="_blank">
-<img alt="Ícone" class="icon" src="https://cdn-icons-png.flaticon.com/512/4600/4600333.png"/>
-<div class="title"> Card doido <br/></div>
-</a>
-</div>
-
-</main><aside class="painel-lateral">
-<h2><i>Phillip...</i></h2>
-       <p><span style="font-size: 20px;"><strong>Painel Lateral Legal</strong></span></br>
-       Utilizado pra deixar coisas fixas</br>
-       Tipo informações que são básicas </br>
-       A ideia é colocar uma caixa de texto aqui um pouco melhor. Essa tá muito xinfrin
-      <h2>Notepad da massa!</h2>
-     <textarea placeholder="Digite suas anotações aqui..." style="width: 95%; min-height: 100px; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; resize: vertical;"></textarea>
-    </aside>
-   </div>
-
+<!-- Quill.js -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script>
-  const textarea = document.querySelector('.painel-lateral textarea');
-  window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('painel_anotacoes');
-    if (saved) textarea.value = saved;
+  const quill = new Quill('#editor', {
+    theme: 'snow'
   });
-  textarea.addEventListener('input', () => {
-    localStorage.setItem('painel_anotacoes', textarea.value);
+
+  // Salvar e carregar anotações com localStorage
+  const storageKey = 'eldoria-anotacoes';
+  const saved = localStorage.getItem(storageKey);
+  if (saved) {
+    quill.root.innerHTML = saved;
+  }
+  quill.on('text-change', () => {
+    localStorage.setItem(storageKey, quill.root.innerHTML);
   });
 </script>
+
 </body>
 </html>

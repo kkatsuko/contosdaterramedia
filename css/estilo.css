@@ -44,7 +44,9 @@ main {
   gap: 20px;
   margin-bottom: 40px;
 }
-
+.grid-cards a.card {
+  align-self: start;
+}
 .card {
   background-color: #f4f1e6;
   border-radius: 10px;
@@ -52,10 +54,13 @@ main {
   box-shadow: 0 0 10px #0005;
   text-align: center;
   transition: transform 0.2s;
-  display: block;
   text-decoration: none;
   color: inherit;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto; /* Importante */
+  max-width: 100%;
 }
 
 .card:hover {

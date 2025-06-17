@@ -52,12 +52,10 @@ main {
   box-shadow: 0 0 10px #0005;
   text-align: center;
   transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
   text-decoration: none;
   color: inherit;
-  height: 100%;
+  height: auto;
 }
 
 .card:hover {

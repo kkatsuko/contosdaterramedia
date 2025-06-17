@@ -40,14 +40,31 @@ header nav {
 main {
   flex: 1;
 }
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
 nav a {
   margin: 0 10px;
-  color: #cfa96d;
-  text-decoration: none;
   font-weight: bold;
+  color: #ffeabf;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 nav a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #cfa96d;
+  text-shadow: 0 0 5px #cfa96d;
 }
 main {
   padding: 20px;

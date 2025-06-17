@@ -31,9 +31,16 @@ header::before {
   background-color: rgba(30, 30, 30, 0.6); /* escurece a imagem */
   z-index: 0;
 }
+header h1 {
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 3.5rem;
+  color: #ffeabf;
+  text-shadow: 2px 2px 5px #000;
+  margin: 0;
+  letter-spacing: 2px;
+}
 
-header h1,
-header nav {
+header h1, header nav {
   position: relative;
   z-index: 1;
 }
@@ -128,3 +135,4 @@ main {
   margin: 0 auto;
   padding: 0 20px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');

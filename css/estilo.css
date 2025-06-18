@@ -162,6 +162,10 @@ section {
   transition: transform 0.2s ease-in-out;
   overflow: hidden;
   width: 100%;
+  aspect-ratio: 1 / 1; /* Deixa o card quadrado */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .grid-cards .card:hover {
